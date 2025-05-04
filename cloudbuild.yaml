@@ -1,0 +1,22 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '--platform=linux/amd64',
+        '-t',
+        'asia-east1-docker.pkg.dev/social-app-458722/vue-social/production:latest',
+        '--build-arg',
+        'PLATFORM=linux/amd64',
+        '-f',
+        'Dockerfile',
+        '.'
+      ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'push',
+        'asia-east1-docker.pkg.dev/social-app-458722/vue-social/production:latest',
+      ]
+options:
+  logging: CLOUD_LOGGING_ONLY
