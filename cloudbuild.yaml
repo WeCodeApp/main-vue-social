@@ -5,7 +5,7 @@ steps:
         'build',
         '--platform=linux/amd64',
         '-t',
-        'asia-east1-docker.pkg.dev/social-app-458722/vue-social/production:latest',
+        'asia-east1-docker.pkg.dev/feature-flags-459006/vue-social/production:latest',
         '--build-arg',
         'PLATFORM=linux/amd64',
         '-f',
@@ -16,7 +16,7 @@ steps:
     args:
       [
         'push',
-        'asia-east1-docker.pkg.dev/social-app-458722/vue-social/production:latest',
+        'asia-east1-docker.pkg.dev/feature-flags-459006/vue-social/production:latest',
       ]
 options:
   logging: CLOUD_LOGGING_ONLY
